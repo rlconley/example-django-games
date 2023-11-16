@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Detail</title>
+</head>
+<body>
+    <h1>This is my collection detail page!</h1>
+    {{collection}}
+    <h2>The games in this collection are:</h2>
+    <ul>
+    {% for game in collection.games.all %}
+    <li>{{game}}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'home' %}">Take Me Home, Country Roads</a>
+</body>
+</html>

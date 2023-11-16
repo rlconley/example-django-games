@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Game</title>
+</head>
+<body>
+    <h1>This is the page with the form to create a new game</h1>
+    <form action="" method='post'>
+        {% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>
